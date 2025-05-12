@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velin Thread</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/kXW76LCM/logo-transparent.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CSS (for search icon and footer icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Custom Swiper pagination styles for .hero-slider */
+        .hero-slider .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: #cbd5e1;
+            opacity: 1;
+            margin: 0 5px !important;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero-slider .swiper-pagination-bullet-active {
+            background-color: #3e1a0d;
+            transform: scale(1.1);
+        }
+
+        /* Hamburger X animation base */
+        .hamburger-menu .bar {
+            transform-origin: center;
+        }
+
+        /* --- START: CSS for Customer Reviews Slider Pagination --- */
+        .customer-reviews-slider .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: #94a3b8;
+            opacity: 1;
+            margin: 0 5px !important;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .customer-reviews-slider .swiper-pagination-bullet-active {
+            background-color: #0d0400c6;
+            transform: scale(1.1);
+        }
+        /* --- END: CSS for Customer Reviews Slider Pagination --- */
+    </style>
+</head>
+
+<body class="font-sans m-0 p-0 text-slate-700" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+
+  <div 
+  class="text-black text-center p-2.5 text-sm m-3 rounded font-mono font-semibold" 
+  style="background: linear-gradient(to right, #d7ccc8, #83463b);">
+  FLAT 15% OFF ON ALL ORDERS | USE CODE: VELIN15
+</div>
+
+
+    <nav class="navbar shadow-md sticky top-0 z-50" style="background: linear-gradient(to right,  #3e2723, #c8a193);">
+    <div class="container mx-auto px-4 flex items-center justify-between min-h-[60px] relative">
+        <a href="front.html" class="flex items-center space-x-2 mr-auto">
+    <img src="https://i.postimg.cc/kXW76LCM/logo-transparent.png" alt="Logo" class="h-10">
+    <div class="flex space-x-">
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">V</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">E</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">L</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">I</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">N</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">T</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">H</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">R</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">E</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">A</span>
+        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">D</span>
+    </div>
+</a>
+
+
+        <div id="navItemsGroup" class="nav-items-group hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-full md:top-auto left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none z-40 items-stretch md:items-center py-2 md:py-0">
+            <ul class="flex flex-col md:flex-row md:items-center gap-0 md:gap-10 list-none p-0 m-0 font-mono">
+                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">MEN</li>
+                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">WOMEN</li>
+                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">KIDS</li>
+                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">NEW ARRIVALS</li>
+                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 text-rose-700 cursor-pointer hover:text-rose-600 transition-colors">SALE</li>
+            </ul>
+            <div class="relative w-auto my-3 mx-5 md:my-0 md:ml-5 md:flex-grow md:max-w-xs">
+                <input type="text" placeholder="Search for products, brands" class="p-2 pr-10 border border-slate-300 rounded text-sm w-full placeholder-slate-500 text-black">
+                <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-slate-700"></i>
+                </span>
+            </div>
+        </div>
+
+        <!-- Login Icon -->
+        <a href="login.html" title="Login / My Account" class="text-xl text-black hover:text-rose-800 no-underline ml-auto md:ml-6">
+            <i class="fas fa-user"></i>
+        </a>
+
+        <!-- Cart Icon -->
+        <a href="cart.html" title="Shopping Cart" class="text-2xl relative text-black hover:text-rose-800 no-underline ml-4">
+            🛒<span id="cart-count" class="bg-rose-700 text-white rounded-full px-1.5 py-0.5 text-xs absolute -top-2 -right-2.5 leading-tight">0</span>
+        </a>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu md:hidden cursor-pointer ml-4">
+            <span class="bar block w-6 h-0.5 bg-black my-[5px] transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-6 h-0.5 bg-black my-[5px] transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-6 h-0.5 bg-black my-[5px] transition-all duration-300 ease-in-out"></span>
+        </div>
+    </div>
+</nav>
+
+
+    <section class="relative w-full px-0 sm:px-4 md:px-6 py-4 md:py-6">
+        <div class="swiper hero-slider h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-[calc(100vh-120px)] max-h-[600px] rounded-lg overflow-hidden shadow-lg">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#" target="_blank" class="block bg-cover bg-center w-full h-full" style="background-image: url('https://i.postimg.cc/T1Fk0shq/uoftxv7b.png'); min-height: 300px;"></a></div>
+                <div class="swiper-slide"><a href="#" target="_blank" class="block bg-cover bg-center w-full h-full" style="background-image: url('https://i.postimg.cc/66c4ZZFq/vhoxhq5m.png'); min-height: 300px;"></a></div>
+                <div class="swiper-slide"><a href="#" target="_blank" class="block bg-cover bg-center w-full h-full" style="background-image: url('https://i.postimg.cc/xdV1hjBB/k9635e1x.png'); min-height: 300px;"></a></div>
+                <div class="swiper-slide"><a href="#" target="_blank" class="block bg-cover bg-center w-full h-full" style="background-image: url('https://i.postimg.cc/t4k9Sdtn/vclypuo9.png'); min-height: 300px;"></a></div>
+            </div>
+            <div class="swiper-pagination !bottom-4 md:!bottom-6"></div>
+        </div>
+    </section>
+
+   <section class="py-8 md:py-12" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-black text-center mb-8 md:mb-12">Category</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+
+            <!-- Men's Fashion -->
+            <a href="#" class="block group">
+                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6114/6114800.png" alt="Men" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+                </div>
+                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Men's Fashion</h3>
+            </a>
+
+            <!-- Women's Style -->
+            <a href="#" class="block group">
+                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4549/4549589.png" alt="Women" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+                </div>
+                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Women's Style</h3>
+            </a>
+
+            <!-- Kids' Corner -->
+            <a href="#" class="block group">
+                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
+                    <img src="https://i.pinimg.com/736x/c8/24/52/c82452b497ecddda7816d7b59ba829a0.jpg" alt="Kids" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+                </div>
+                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Kids' Corner</h3>
+            </a>
+
+            <!-- Accessories -->
+            <a href="#" class="block group">
+                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTItuxR0wNm3KFkoplYqnLF5DiHL55ujgUJqQ&s" alt="Accessories" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+                </div>
+                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Accessories</h3>
+            </a>
+
+            <!-- New In -->
+            <a href="#" class="block group">
+                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkXXdPmMeKHQqkKyYW4L7VK9MQEWzt6YMiw&s" alt="New In" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+                </div>
+                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">New In</h3>
+            </a>
+
+            <!-- Big Sale -->
+            <a href="#" class="block group">
+                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1221/1221001.png" alt="Sale" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+                </div>
+                <h3 class="text-center mt-2 font-bold text-rose-500 group-hover:text-rose-600">Big Sale</h3>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+    <section class="py-8 md:py-12" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-black text-center mb-8 md:mb-12">Trending Now 🔥</h2>
+            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="product-grid">
+                <!-- Products from script.js -->
+            </div>
+            <div class="text-center mt-12">
+                    <a href="#" class="bg-orange-900 hover:bg-orange-700 text-white font-semibold py-3 px-10 rounded-lg text-lg transition duration-200">
+                        View More Products
+                    </a>
+                </div>
+        </div>
+    </section>
+
+   <section class="py-8 md:py-12" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-white text-center mb-8 md:mb-12 font-sans">
+            🎉 Special Offers Just For You! 🎉
+        </h2>
+
+        <!-- Grid for Offer Items -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 items-start">
+
+            <!-- Offer Item 1 -->
+            <div class="text-center">
+                <img src="https://cdn.dribbble.com/userupload/16408443/file/original-3897b1a96d4d096c7441b1950fe313fb.jpg?format=webp&resize=400x300&vertical=center" alt="Stylish Cap Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
+                <p class="text-sm font-medium text-amber-200">💰 Up to 20% Off</p>
+            </div>
+
+            <!-- Offer Item 2 -->
+            <div class="text-center">
+                <img src="https://uwumarket.us/cdn/shop/products/BlackT-ShirtMock_5_3.jpg?v=1657841989" alt="Black T-Shirt Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
+                <p class="text-sm font-medium text-amber-200">🎁 Buy 1 Get 1 Free</p>
+            </div>
+
+            <!-- Offer Item 3 -->
+            <div class="text-center">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13763008/2023/12/26/59baaaa2-f0de-4ca9-95b3-6b85611ada251703584462059NikeWomenWhiteBlackBlazerLow77Sneakers1.jpg" alt="Nike Sneaker Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
+                <p class="text-sm font-medium text-amber-200">🚚 Free Delivery</p>
+            </div>
+
+            <!-- Offer Item 4 -->
+            <div class="text-center">
+                <img src="https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFXekliaWxjOUwuX1NTNDAwXy5qcGc.jpg" alt="Jeans Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
+                <p class="text-sm font-medium text-amber-200">🏷️ Flat 15% Discount</p>
+            </div>
+
+            <!-- Offer Item 5 -->
+            <div class="text-center">
+                <img src="https://m.media-amazon.com/images/I/61nv33S+ifL._SY675_.jpg" alt="Headphones Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
+                <p class="text-sm font-medium text-amber-200">🔥 Special Combo Deal</p>
+            </div>
+
+            <!-- Offer Item 6 -->
+            <div class="text-center">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/400110230/EX/LN/XT/36043037/41udvi8hqql-500x500.jpg" alt="Watch Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg mb-2">
+                <p class="text-sm font-medium text-amber-200">⏳ Limited Time Offer</p>
+            </div>
+
+        </div>
+
+        <!-- See More Button -->
+        <div class="text-center mt-8 md:mt-12">
+             <button class="py-2 px-6 bg-orange-900 text-white font-semibold rounded-md shadow hover:bg-orange-700 active:bg-green-800 transition-colors duration-200">
+                 👀 See More Offers
+             </button>
+            <!-- Or use an anchor tag if linking to another page: -->
+            <!--
+            <a href="/offers" class="inline-block py-2 px-6 bg-white text-brown-800 font-semibold rounded-md shadow hover:bg-gray-100 transition-colors duration-200">
+                👀 See More Offers
+            </a>
+            -->
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    <!-- START: NEW Customer Reviews Section -->
+<section class="py-8 md:py-12 " style="background: linear-gradient(to right, #3e2723, #c8a193);">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-black text-center mb-8 md:mb-12">What Our Customers Say</h2>
+        <div class="swiper customer-reviews-slider overflow-hidden">
+            <div class="swiper-wrapper">
+                <!-- Review Card 1 -->
+                <div class="swiper-slide p-1">
+                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer Alice M."
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
+                        <h3 class="text-lg font-semibold text-black mb-1">Alice M.</h3>
+                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                            "Absolutely love the quality and style! The shipping was incredibly fast too. Will definitely be shopping here again."
+                        </p>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="swiper-slide p-1">
+                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer Bob K."
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
+                        <h3 class="text-lg font-semibold text-black mb-1">Bob K.</h3>
+                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                            "Great selection of unique pieces. I found exactly what I was looking for. The customer service was also very helpful."
+                        </p>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="far fa-star ml-0.5 text-slate-300"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="swiper-slide p-1">
+                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Customer Clara S."
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
+                        <h3 class="text-lg font-semibold text-black mb-1">Clara S.</h3>
+                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                            "The fabric is so soft and comfortable. I'm really impressed with the fit and finish. Highly recommend this store!"
+                        </p>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star-half-alt ml-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 4 -->
+                <div class="swiper-slide p-1">
+                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                        <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="Customer David L."
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
+                        <h3 class="text-lg font-semibold text-black mb-1">David L.</h3>
+                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                            "My order arrived earlier than expected, and the items exceeded my expectations. Five stars all around!"
+                        </p>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 5 -->
+                <div class="swiper-slide p-1">
+                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Customer Eva G."
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
+                        <h3 class="text-lg font-semibold text-black mb-1">Eva G.</h3>
+                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                            "Trendy designs and good prices. I've already recommended Velin Thread to my friends. Keep up the great work!"
+                        </p>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star ml-0.5"></i>
+                            <i class="fas fa-star-half-alt ml-0.5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination !bottom-0 pt-4"></div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- END: NEW Customer Reviews Section -->
+
+
+    <!--footer  -->
+    <footer class="text-slate-200 py-8 md:py-10" style="background: linear-gradient(to right, #3a1d17, #291006);">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div>
+                    <h4 class="text-base font-semibold text-slate-50 mb-2">Velin Thread</h4>
+                    <p class="text-xs text-slate-300">Your one-stop fashion destination for the latest trends and styles.</p>
+                    <div class="mt-3 flex space-x-2">
+                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-facebook-f text-lg"></i></a>
+                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-instagram text-lg"></i></a>
+                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-twitter text-lg"></i></a>
+                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-youtube text-lg"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold text-slate-50 mb-2">Shop</h4>
+                    <ul class="space-y-1 text-slate-300">
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Men's Collection</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Women's Collection</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Kid's Wear</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Accessories</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Sale Items</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold text-slate-50 mb-2">Customer Service</h4>
+                    <ul class="space-y-1 text-slate-300">
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">FAQs</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Track Order</a></li>
+                        <li><a href="#" class="hover:text-slate-100 text-xs">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-base font-semibold text-slate-50 mb-2">Newsletter</h4>
+                    <p class="text-xs mb-2 text-slate-300">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <form action="#">
+                        <div class="flex">
+                            <input type="email" placeholder="Enter your email" class="w-full py-1.5 px-2 rounded-l-md text-slate-800 bg-slate-100 focus:outline-none focus:ring-2 focus:ring-rose-500 text-xs placeholder-slate-400">
+                            <button type="submit" class="bg-red-700 hover:bg-rose-600 active:green-700 text-white py-1.5 px-3 rounded-r-md text-xs">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 pt-6 text-center text-slate-400">
+                <p class="text-xs">© 2024 Velin Thread Fashion (Sadman wahid). All Rights Reserved. Designed with Tailwind CSS.</p>
+                 <p class="text-xs mt-1">This is a conceptual clone for demonstration purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Notification Bubble -->
+    <div id="cart-notification-bubble" class="fixed bottom-5 right-5 bg-emerald-500 text-white py-3 px-5 rounded-lg shadow-xl text-sm font-medium z-[100] opacity-0 transition-all duration-300 ease-in-out transform translate-y-10 pointer-events-none">
+        Product added to cart!
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
