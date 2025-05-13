@@ -3,122 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velin Thread</title>
+    <title>Velin - Team Vinchenzo</title> <!-- Updated title -->
     <link rel="icon" type="image/png" href="https://i.postimg.cc/kXW76LCM/logo-transparent.png">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Font Awesome CSS (for search icon and footer icons) -->
+    <!-- Font Awesome CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts (Poppins works well for light themes too) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Removed dark background */
+        }
+        /* Adjusting heading font if needed */
+        .section-title {
+             font-weight: 600; /* Example: Make section titles semi-bold */
+        }
+
         /* Custom Swiper pagination styles for .hero-slider */
         .hero-slider .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            background-color: #cbd5e1;
-            opacity: 1;
+            width: 9px;
+            height: 9px;
+            background-color: #a5b4fc; /* Indigo-300 inactive */
+            opacity: 0.7; /* Slightly transparent */
             margin: 0 5px !important;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
         }
 
         .hero-slider .swiper-pagination-bullet-active {
-            background-color: #3e1a0d;
-            transform: scale(1.1);
+            background-color: #fb7185; /* Rose-400 active */
+            opacity: 1;
+            transform: scale(1.15);
         }
 
         /* Hamburger X animation base */
         .hamburger-menu .bar {
             transform-origin: center;
+            background-color: #374151; /* Darker bars for visibility on light nav */
         }
 
         /* --- START: CSS for Customer Reviews Slider Pagination --- */
         .customer-reviews-slider .swiper-pagination-bullet {
             width: 8px;
             height: 8px;
-            background-color: #94a3b8;
+            background-color: #9ca3af; /* Gray-400 */
             opacity: 1;
             margin: 0 5px !important;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .customer-reviews-slider .swiper-pagination-bullet-active {
-            background-color: #0d0400c6;
+            background-color: #f472b6; /* Pink-400 */
             transform: scale(1.1);
         }
         /* --- END: CSS for Customer Reviews Slider Pagination --- */
     </style>
 </head>
 
-<body class="font-sans m-0 p-0 text-slate-700" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+<body class="font-sans m-0 p-0 text-slate-700" style="background: linear-gradient(to bottom right, #fff7ed, #fef2f2, #ffffff);">
+  <!-- Body: Very Light Orange/Rose/White Gradient -->
 
-  <div 
-  class="text-black text-center p-2.5 text-sm m-3 rounded font-mono font-semibold" 
-  style="background: linear-gradient(to right, #d7ccc8, #83463b);">
+  <div
+  class="text-gray-800 text-center p-3 text-sm m-3 rounded-md font-semibold shadow-sm"
+  style="background: linear-gradient(to right, #fdba74, #fda4af);">
+  <!-- Promo Bar: Orange-300 to Rose-300 Gradient, dark text -->
   FLAT 15% OFF ON ALL ORDERS | USE CODE: VELIN15
 </div>
 
 
-    <nav class="navbar shadow-md sticky top-0 z-50" style="background: linear-gradient(to right,  #3e2723, #c8a193);">
+    <nav class="navbar shadow-md sticky top-0 z-50 bg-white">
+    <!-- Navbar: White background -->
     <div class="container mx-auto px-4 flex items-center justify-between min-h-[60px] relative">
         <a href="front.html" class="flex items-center space-x-2 mr-auto">
-    <img src="https://i.postimg.cc/kXW76LCM/logo-transparent.png" alt="Logo" class="h-10">
-    <div class="flex space-x-">
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">V</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">E</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">L</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">I</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">N</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">T</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">H</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">R</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">E</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">A</span>
-        <span class="text-xl font-semibold text-black font-mono border border-black px-1 py-0.5 rounded">D</span>
-    </div>
-</a>
+            <img src="https://cdn.myportfolio.com/dfb1b77f-76fd-40dc-929f-90822e6329aa/51d65ce3-1e71-4c9b-a062-16036906bec8_rw_1920.jpg?h=bee487bb4fc73abb43d173a558c98b9e" alt="Logo" class="h-10">
+             <!-- Logo Text: Darker Text, accent border -->
+            <div class="flex space-x-1">
+                 <span class="text-xl font-bold text-black font-mono border border-black px-1 py-0.5 rounded">V</span>
+    <span class="text-xl font-bold text-black font-mono border border-black px-1 py-0.5 rounded">E</span>
+    <span class="text-xl font-bold text-black font-mono border border-black px-1 py-0.5 rounded">L</span>
+    <span class="text-xl font-bold text-black font-mono border border-black px-1 py-0.5 rounded">I</span>
+    <span class="text-xl font-bold text-black font-mono border border-black px-1 py-0.5 rounded">N</span>
+   
+               
+            </div>
+        </a>
 
-
+        <!-- Mobile Menu Background: White -->
         <div id="navItemsGroup" class="nav-items-group hidden md:flex flex-col md:flex-row md:items-center absolute md:static top-full md:top-auto left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none z-40 items-stretch md:items-center py-2 md:py-0">
-            <ul class="flex flex-col md:flex-row md:items-center gap-0 md:gap-10 list-none p-0 m-0 font-mono">
-                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">MEN</li>
-                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">WOMEN</li>
-                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">KIDS</li>
-                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer hover:text-rose-800 transition-colors text-black">NEW ARRIVALS</li>
-                <li class="font-bold text-xl py-3 px-5 md:py-0 md:px-0 text-rose-700 cursor-pointer hover:text-rose-600 transition-colors">SALE</li>
+             <!-- Nav Links: Dark Text, Rose Hover -->
+            <ul class="flex flex-col md:flex-row md:items-center gap-0 md:gap-8 list-none p-0 m-0">
+                <li class="font-medium text-md py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer text-slate-600 hover:text-rose-500 transition-colors">MEN</li>
+                <li class="font-medium text-md py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer text-slate-600 hover:text-rose-500 transition-colors">WOMEN</li>
+                <li class="font-medium text-md py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer text-slate-600 hover:text-rose-500 transition-colors">KIDS</li>
+                <li class="font-medium text-md py-3 px-5 md:py-0 md:px-0 border-b md:border-none border-slate-100 cursor-pointer text-slate-600 hover:text-rose-500 transition-colors">NEW ARRIVALS</li>
+                <li class="font-bold text-md py-3 px-5 md:py-0 md:px-0 text-rose-600 cursor-pointer hover:text-rose-500 transition-colors">SALE</li>
             </ul>
-            <div class="relative w-auto my-3 mx-5 md:my-0 md:ml-5 md:flex-grow md:max-w-xs">
-                <input type="text" placeholder="Search for products, brands" class="p-2 pr-10 border border-slate-300 rounded text-sm w-full placeholder-slate-500 text-black">
+             <!-- Search Bar: Light Theme -->
+            <div class="relative w-auto my-3 mx-5 md:my-0 md:ml-6 md:flex-grow md:max-w-xs">
+                <input type="text" placeholder="Search products..." class="p-2.5 pr-10 border border-slate-300 rounded-md text-sm w-full placeholder-slate-400 text-slate-700 bg-white focus:ring-2 focus:ring-rose-300 focus:border-transparent outline-none">
                 <span class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                    <i class="fas fa-search text-slate-700"></i>
+                    <i class="fas fa-search text-slate-400"></i>
                 </span>
             </div>
         </div>
 
-        <!-- Login Icon -->
-        <a href="login.html" title="Login / My Account" class="text-xl text-black hover:text-rose-800 no-underline ml-auto md:ml-6">
+        <!-- Icons: Darker Color, Rose Hover -->
+        <a href="login.html" title="Login / My Account" class="text-xl text-slate-600 hover:text-rose-500 no-underline ml-auto md:ml-5 transition-colors">
             <i class="fas fa-user"></i>
         </a>
 
-        <!-- Cart Icon -->
-        <a href="cart.html" title="Shopping Cart" class="text-2xl relative text-black hover:text-rose-800 no-underline ml-4">
-            🛒<span id="cart-count" class="bg-rose-700 text-white rounded-full px-1.5 py-0.5 text-xs absolute -top-2 -right-2.5 leading-tight">0</span>
+        <a href="cart.html" title="Shopping Cart" class="text-2xl relative text-slate-600 hover:text-rose-500 no-underline ml-4 transition-colors">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="bg-rose-500 text-white rounded-full px-1.5 py-0.5 text-xs absolute -top-2 -right-2.5 leading-tight flex items-center justify-center">0</span>
         </a>
 
-        <!-- Hamburger Menu -->
+        <!-- Hamburger Menu: Darker Bars (updated in <style>) -->
         <div class="hamburger-menu md:hidden cursor-pointer ml-4">
-            <span class="bar block w-6 h-0.5 bg-black my-[5px] transition-all duration-300 ease-in-out"></span>
-            <span class="bar block w-6 h-0.5 bg-black my-[5px] transition-all duration-300 ease-in-out"></span>
-            <span class="bar block w-6 h-0.5 bg-black my-[5px] transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-6 h-0.5 my-[5px] transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-6 h-0.5 my-[5px] transition-all duration-300 ease-in-out"></span>
+            <span class="bar block w-6 h-0.5 my-[5px] transition-all duration-300 ease-in-out"></span>
         </div>
     </div>
 </nav>
 
 
     <section class="relative w-full px-0 sm:px-4 md:px-6 py-4 md:py-6">
+         <!-- Hero Slider: Pagination colors adjusted in <style> block -->
         <div class="swiper hero-slider h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-[calc(100vh-120px)] max-h-[600px] rounded-lg overflow-hidden shadow-lg">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="#" target="_blank" class="block bg-cover bg-center w-full h-full" style="background-image: url('https://i.postimg.cc/T1Fk0shq/uoftxv7b.png'); min-height: 300px;"></a></div>
@@ -130,57 +149,56 @@
         </div>
     </section>
 
-   <section class="py-8 md:py-12" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+   <section class="py-12 md:py-16" style="background-color: #fef9c3;">
+    <!-- Category Section: Light Yellow Background -->
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-black text-center mb-8 md:mb-12">Category</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+        <h2 class="text-3xl md:text-4xl text-slate-800 text-center mb-10 md:mb-14 relative pb-2 section-title">
+            Shop By Category
+            <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full"></span>
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5 md:gap-8">
 
-            <!-- Men's Fashion -->
-            <a href="#" class="block group">
-                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/6114/6114800.png" alt="Men" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+            <!-- Category Items: White background, dark text, teal hover -->
+            <a href="#" class="block group transform hover:-translate-y-1 transition-transform duration-300">
+                <div class="overflow-hidden rounded-lg shadow-md h-36 md:h-44 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6114/6114800.png" alt="Men" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 p-4">
                 </div>
-                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Men's Fashion</h3>
+                <h3 class="text-center mt-3 font-medium text-slate-700 group-hover:text-teal-600 transition-colors text-base">Men's Fashion</h3>
             </a>
 
-            <!-- Women's Style -->
-            <a href="#" class="block group">
-                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/4549/4549589.png" alt="Women" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+            <a href="#" class="block group transform hover:-translate-y-1 transition-transform duration-300">
+                <div class="overflow-hidden rounded-lg shadow-md h-36 md:h-44 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4549/4549589.png" alt="Women" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 p-4">
                 </div>
-                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Women's Style</h3>
+                <h3 class="text-center mt-3 font-medium text-slate-700 group-hover:text-teal-600 transition-colors text-base">Women's Style</h3>
             </a>
 
-            <!-- Kids' Corner -->
-            <a href="#" class="block group">
-                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
-                    <img src="https://i.pinimg.com/736x/c8/24/52/c82452b497ecddda7816d7b59ba829a0.jpg" alt="Kids" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+            <a href="#" class="block group transform hover:-translate-y-1 transition-transform duration-300">
+                 <div class="overflow-hidden rounded-lg shadow-md h-36 md:h-44 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
+                    <img src="https://i.pinimg.com/736x/c8/24/52/c82452b497ecddda7816d7b59ba829a0.jpg" alt="Kids" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 p-4">
                 </div>
-                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Kids' Corner</h3>
+                <h3 class="text-center mt-3 font-medium text-slate-700 group-hover:text-teal-600 transition-colors text-base">Kids' Corner</h3>
             </a>
 
-            <!-- Accessories -->
-            <a href="#" class="block group">
-                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTItuxR0wNm3KFkoplYqnLF5DiHL55ujgUJqQ&s" alt="Accessories" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+            <a href="#" class="block group transform hover:-translate-y-1 transition-transform duration-300">
+                 <div class="overflow-hidden rounded-lg shadow-md h-36 md:h-44 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTItuxR0wNm3KFkoplYqnLF5DiHL55ujgUJqQ&s" alt="Accessories" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 p-4">
                 </div>
-                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">Accessories</h3>
+                <h3 class="text-center mt-3 font-medium text-slate-700 group-hover:text-teal-600 transition-colors text-base">Accessories</h3>
             </a>
 
-            <!-- New In -->
-            <a href="#" class="block group">
-                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkXXdPmMeKHQqkKyYW4L7VK9MQEWzt6YMiw&s" alt="New In" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+            <a href="#" class="block group transform hover:-translate-y-1 transition-transform duration-300">
+                 <div class="overflow-hidden rounded-lg shadow-md h-36 md:h-44 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkXXdPmMeKHQqkKyYW4L7VK9MQEWzt6YMiw&s" alt="New In" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 p-4">
                 </div>
-                <h3 class="text-center mt-2 font-medium text-black group-hover:text-indigo-600">New In</h3>
+                <h3 class="text-center mt-3 font-medium text-slate-700 group-hover:text-teal-600 transition-colors text-base">New In</h3>
             </a>
 
-            <!-- Big Sale -->
-            <a href="#" class="block group">
-                <div class="overflow-hidden rounded-lg shadow-md h-32 md:h-40 bg-slate-50 flex items-center justify-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1221/1221001.png" alt="Sale" class="max-h-full w-auto object-contain transform group-hover:scale-110 transition-transform duration-300 p-2">
+            <a href="#" class="block group transform hover:-translate-y-1 transition-transform duration-300">
+                 <div class="overflow-hidden rounded-lg shadow-md h-36 md:h-44 flex items-center justify-center bg-white hover:shadow-lg transition-shadow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1221/1221001.png" alt="Sale" class="max-h-full w-auto object-contain transform group-hover:scale-105 transition-transform duration-300 p-4">
                 </div>
-                <h3 class="text-center mt-2 font-bold text-rose-500 group-hover:text-rose-600">Big Sale</h3>
+                <h3 class="text-center mt-3 font-bold text-red-600 group-hover:text-red-500 transition-colors text-base">Big Sale</h3>
             </a>
 
         </div>
@@ -188,256 +206,223 @@
 </section>
 
 
-    <section class="py-8 md:py-12" style="background: linear-gradient(to right, #3e2723, #c8a193);">
-
+    <section class="py-12 md:py-16 bg-white">
+    <!-- Trending Section: White Background -->
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-black text-center mb-8 md:mb-12">Trending Now 🔥</h2>
-            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="product-grid">
-                <!-- Products from script.js -->
+            <h2 class="text-3xl md:text-4xl text-slate-800 text-center mb-10 md:mb-14 relative pb-2 section-title">
+                Trending Now 🔥
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full"></span>
+            </h2>
+            <!-- Product Grid: Products loaded by script.js. Ensure script.js styles them for light theme -->
+            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8" id="product-grid">
+                <!-- Products will be injected here by script.js -->
+                <!-- Example of how script.js MIGHT structure a product card for this light theme:
+                <div class="bg-white rounded-lg shadow-md overflow-hidden group border border-slate-200">
+                    <img src="..." alt="..." class="w-full h-56 object-cover mb-3 group-hover:opacity-90 transition-opacity">
+                    <div class="p-4 text-slate-700">
+                        <h3 class="font-semibold text-lg mb-1 truncate text-slate-800">Product Name</h3>
+                        <p class="text-orange-600 font-bold text-xl mb-2">$19.99</p>
+                        <button class="mt-3 w-full bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-200 shadow hover:shadow-md">Add to Cart</button>
+                    </div>
+                </div>
+                -->
             </div>
-            <div class="text-center mt-12">
-                    <a href="#" class="bg-orange-900 hover:bg-orange-700 text-white font-semibold py-3 px-10 rounded-lg text-lg transition duration-200">
+            <div class="text-center mt-12 md:mt-16">
+                    <a href="#" class="inline-block bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white font-semibold py-3 px-10 rounded-lg text-lg transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                         View More Products
                     </a>
-                </div>
+            </div>
         </div>
     </section>
 
-   <section class="py-8 md:py-12" style="background: linear-gradient(to right, #3e2723, #c8a193);">
+   <section class="py-12 md:py-16" style="background-color: #ecfeff;">
+   <!-- Special Offers: Light Cyan Background -->
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-white text-center mb-8 md:mb-12 font-sans">
-            🎉 Special Offers Just For You! 🎉
+        <h2 class="text-3xl md:text-4xl text-center mb-10 md:mb-14 relative pb-2 section-title">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-sky-500 to-indigo-500 font-semibold">
+                🎉 Special Offers Just For You! 🎉
+            </span>
+             <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-to-r from-cyan-400 to-sky-500 rounded-full"></span>
         </h2>
 
-        <!-- Grid for Offer Items -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 items-start">
-
-            <!-- Offer Item 1 -->
-            <div class="text-center">
-                <img src="https://cdn.dribbble.com/userupload/16408443/file/original-3897b1a96d4d096c7441b1950fe313fb.jpg?format=webp&resize=400x300&vertical=center" alt="Stylish Cap Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
-                <p class="text-sm font-medium text-amber-200">💰 Up to 20% Off</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5 md:gap-8 items-start">
+            <!-- Offer Items: Darker text, brighter image shadow -->
+            <div class="text-center group">
+                <img src="https://cdn.dribbble.com/userupload/16408443/file/original-3897b1a96d4d096c7441b1950fe313fb.jpg?format=webp&resize=400x300&vertical=center" alt="Stylish Cap Offer" class="w-40 h-40 md:w-48 md:h-48 object-cover mx-auto rounded-lg shadow-lg mb-3 transform group-hover:scale-105 group-hover:shadow-xl transition-all duration-300 ease-in-out border border-slate-100">
+                <p class="text-sm font-medium text-orange-600">💰 Up to 20% Off</p>
             </div>
-
-            <!-- Offer Item 2 -->
-            <div class="text-center">
-                <img src="https://uwumarket.us/cdn/shop/products/BlackT-ShirtMock_5_3.jpg?v=1657841989" alt="Black T-Shirt Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
-                <p class="text-sm font-medium text-amber-200">🎁 Buy 1 Get 1 Free</p>
+             <div class="text-center group">
+                <img src="https://uwumarket.us/cdn/shop/products/BlackT-ShirtMock_5_3.jpg?v=1657841989" alt="Black T-Shirt Offer" class="w-40 h-40 md:w-48 md:h-48 object-cover mx-auto rounded-lg shadow-lg mb-3 transform group-hover:scale-105 group-hover:shadow-xl transition-all duration-300 ease-in-out border border-slate-100">
+                <p class="text-sm font-medium text-pink-600">🎁 Buy 1 Get 1 Free</p>
             </div>
-
-            <!-- Offer Item 3 -->
-            <div class="text-center">
-                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13763008/2023/12/26/59baaaa2-f0de-4ca9-95b3-6b85611ada251703584462059NikeWomenWhiteBlackBlazerLow77Sneakers1.jpg" alt="Nike Sneaker Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
-                <p class="text-sm font-medium text-amber-200">🚚 Free Delivery</p>
+            <div class="text-center group">
+                <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/13763008/2023/12/26/59baaaa2-f0de-4ca9-95b3-6b85611ada251703584462059NikeWomenWhiteBlackBlazerLow77Sneakers1.jpg" alt="Nike Sneaker Offer" class="w-40 h-40 md:w-48 md:h-48 object-cover mx-auto rounded-lg shadow-lg mb-3 transform group-hover:scale-105 group-hover:shadow-xl transition-all duration-300 ease-in-out border border-slate-100">
+                <p class="text-sm font-medium text-sky-600">🚚 Free Delivery</p>
             </div>
-
-            <!-- Offer Item 4 -->
-            <div class="text-center">
-                <img src="https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFXekliaWxjOUwuX1NTNDAwXy5qcGc.jpg" alt="Jeans Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
-                <p class="text-sm font-medium text-amber-200">🏷️ Flat 15% Discount</p>
+             <div class="text-center group">
+                <img src="https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFXekliaWxjOUwuX1NTNDAwXy5qcGc.jpg" alt="Jeans Offer" class="w-40 h-40 md:w-48 md:h-48 object-cover mx-auto rounded-lg shadow-lg mb-3 transform group-hover:scale-105 group-hover:shadow-xl transition-all duration-300 ease-in-out border border-slate-100">
+                <p class="text-sm font-medium text-lime-600">🏷️ Flat 15% Discount</p>
             </div>
-
-            <!-- Offer Item 5 -->
-            <div class="text-center">
-                <img src="https://m.media-amazon.com/images/I/61nv33S+ifL._SY675_.jpg" alt="Headphones Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded mb-2">
-                <p class="text-sm font-medium text-amber-200">🔥 Special Combo Deal</p>
+            <div class="text-center group">
+                <img src="https://m.media-amazon.com/images/I/61nv33S+ifL._SY675_.jpg" alt="Headphones Offer" class="w-40 h-40 md:w-48 md:h-48 object-cover mx-auto rounded-lg shadow-lg mb-3 transform group-hover:scale-105 group-hover:shadow-xl transition-all duration-300 ease-in-out border border-slate-100">
+                <p class="text-sm font-medium text-amber-700">🔥 Special Combo Deal</p>
             </div>
-
-            <!-- Offer Item 6 -->
-            <div class="text-center">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/400110230/EX/LN/XT/36043037/41udvi8hqql-500x500.jpg" alt="Watch Offer" class="w-48 h-48 object-cover mx-auto transform hover:scale-105 transition-transform duration-300 ease-in-out rounded-lg mb-2">
-                <p class="text-sm font-medium text-amber-200">⏳ Limited Time Offer</p>
+            <div class="text-center group">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/400110230/EX/LN/XT/36043037/41udvi8hqql-500x500.jpg" alt="Watch Offer" class="w-40 h-40 md:w-48 md:h-48 object-cover mx-auto rounded-lg shadow-lg mb-3 transform group-hover:scale-105 group-hover:shadow-xl transition-all duration-300 ease-in-out border border-slate-100">
+                <p class="text-sm font-medium text-red-600">⏳ Limited Time Offer</p>
             </div>
-
         </div>
 
-        <!-- See More Button -->
-        <div class="text-center mt-8 md:mt-12">
-             <button class="py-2 px-6 bg-orange-900 text-white font-semibold rounded-md shadow hover:bg-orange-700 active:bg-green-800 transition-colors duration-200">
+        <div class="text-center mt-12 md:mt-16">
+             <button class="py-3 px-8 bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-600 hover:to-sky-600 text-white font-semibold rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
                  👀 See More Offers
              </button>
-            <!-- Or use an anchor tag if linking to another page: -->
-            <!--
-            <a href="/offers" class="inline-block py-2 px-6 bg-white text-brown-800 font-semibold rounded-md shadow hover:bg-gray-100 transition-colors duration-200">
-                👀 See More Offers
-            </a>
-            -->
         </div>
-
     </div>
 </section>
 
 
-
-
-    <!-- START: NEW Customer Reviews Section -->
-<section class="py-8 md:py-12 " style="background: linear-gradient(to right, #3e2723, #c8a193);">
+<section class="py-12 md:py-16 bg-white">
+<!-- Reviews Section: White Background -->
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-black text-center mb-8 md:mb-12">What Our Customers Say</h2>
-        <div class="swiper customer-reviews-slider overflow-hidden">
+        <h2 class="text-3xl md:text-4xl text-slate-800 text-center mb-10 md:mb-14 relative pb-2 section-title">
+             What Our Customers Say
+             <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-28 h-1 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full"></span>
+        </h2>
+        <div class="swiper customer-reviews-slider overflow-hidden pb-10">
             <div class="swiper-wrapper">
-                <!-- Review Card 1 -->
+                <!-- Review Cards: Light background, dark text, accent colors -->
                 <div class="swiper-slide p-1">
-                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                     <div class="rounded-xl shadow-lg border border-slate-100 p-6 flex flex-col items-center text-center h-full min-h-[300px]" style="background: linear-gradient(145deg, #ffffff, #f9fafb);">
                         <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer Alice M."
-                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
-                        <h3 class="text-lg font-semibold text-black mb-1">Alice M.</h3>
-                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-5 border-2 border-rose-300 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">Alice M.</h3>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
                             "Absolutely love the quality and style! The shipping was incredibly fast too. Will definitely be shopping here again."
                         </p>
-                        <div class="flex items-center text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
+                        <div class="flex items-center text-amber-500 text-lg"> <!-- Brighter stars -->
+                            <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- Review Card 2 -->
                 <div class="swiper-slide p-1">
-                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                     <div class="rounded-xl shadow-lg border border-slate-100 p-6 flex flex-col items-center text-center h-full min-h-[300px]" style="background: linear-gradient(145deg, #ffffff, #f9fafb);">
                         <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Customer Bob K."
-                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
-                        <h3 class="text-lg font-semibold text-black mb-1">Bob K.</h3>
-                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-5 border-2 border-rose-300 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">Bob K.</h3>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
                             "Great selection of unique pieces. I found exactly what I was looking for. The customer service was also very helpful."
                         </p>
-                        <div class="flex items-center text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="far fa-star ml-0.5 text-slate-300"></i>
+                        <div class="flex items-center text-amber-500 text-lg">
+                            <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="far fa-star ml-1 text-slate-400"></i> <!-- Lighter empty star -->
                         </div>
                     </div>
                 </div>
-
-                <!-- Review Card 3 -->
                 <div class="swiper-slide p-1">
-                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                    <div class="rounded-xl shadow-lg border border-slate-100 p-6 flex flex-col items-center text-center h-full min-h-[300px]" style="background: linear-gradient(145deg, #ffffff, #f9fafb);">
                         <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Customer Clara S."
-                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
-                        <h3 class="text-lg font-semibold text-black mb-1">Clara S.</h3>
-                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                              class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-5 border-2 border-rose-300 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">Clara S.</h3>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
                             "The fabric is so soft and comfortable. I'm really impressed with the fit and finish. Highly recommend this store!"
                         </p>
-                        <div class="flex items-center text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star-half-alt ml-0.5"></i>
+                         <div class="flex items-center text-amber-500 text-lg">
+                            <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star-half-alt ml-1"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- Review Card 4 -->
-                <div class="swiper-slide p-1">
-                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                 <div class="swiper-slide p-1">
+                     <div class="rounded-xl shadow-lg border border-slate-100 p-6 flex flex-col items-center text-center h-full min-h-[300px]" style="background: linear-gradient(145deg, #ffffff, #f9fafb);">
                         <img src="https://randomuser.me/api/portraits/men/78.jpg" alt="Customer David L."
-                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
-                        <h3 class="text-lg font-semibold text-black mb-1">David L.</h3>
-                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-5 border-2 border-rose-300 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">David L.</h3>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
                             "My order arrived earlier than expected, and the items exceeded my expectations. Five stars all around!"
                         </p>
-                        <div class="flex items-center text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
+                        <div class="flex items-center text-amber-500 text-lg">
+                             <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- Review Card 5 -->
                 <div class="swiper-slide p-1">
-                    <div class="bg-gradient-to-r from-[#5f3e34] to-[#5a2e24] rounded-lg shadow-lg p-6 flex flex-col items-center text-center h-full">
+                     <div class="rounded-xl shadow-lg border border-slate-100 p-6 flex flex-col items-center text-center h-full min-h-[300px]" style="background: linear-gradient(145deg, #ffffff, #f9fafb);">
                         <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Customer Eva G."
-                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-4 border-2 border-rose-300">
-                        <h3 class="text-lg font-semibold text-black mb-1">Eva G.</h3>
-                        <p class="text-sm text-black mb-3 leading-relaxed flex-grow">
-                            "Trendy designs and good prices. I've already recommended Velin Thread to my friends. Keep up the great work!"
+                             class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mb-5 border-2 border-rose-300 shadow-sm">
+                        <h3 class="text-lg font-semibold text-slate-800 mb-2">Eva G.</h3>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
+                            "Trendy designs and good prices. I've already recommended Velin to my friends. Keep up the great work!"
                         </p>
-                        <div class="flex items-center text-orange-500">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star ml-0.5"></i>
-                            <i class="fas fa-star-half-alt ml-0.5"></i>
+                        <div class="flex items-center text-amber-500 text-lg">
+                             <i class="fas fa-star"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star ml-1"></i><i class="fas fa-star-half-alt ml-1"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination !bottom-0 pt-4"></div>
+            <div class="swiper-pagination !bottom-0 pt-6"></div> <!-- Pagination colors in <style> -->
         </div>
     </div>
 </section>
 
 
-
-    <!-- END: NEW Customer Reviews Section -->
-
-
-    <!--footer  -->
-    <footer class="text-slate-200 py-8 md:py-10" style="background: linear-gradient(to right, #3a1d17, #291006);">
+    <footer class="text-slate-600 py-10 md:py-14" style="background-color: #f1f5f9;">
+    <!-- Footer: Light Gray Background -->
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
                 <div>
-                    <h4 class="text-base font-semibold text-slate-50 mb-2">Velin Thread</h4>
-                    <p class="text-xs text-slate-300">Your one-stop fashion destination for the latest trends and styles.</p>
-                    <div class="mt-3 flex space-x-2">
-                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-facebook-f text-lg"></i></a>
-                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-instagram text-lg"></i></a>
-                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-twitter text-lg"></i></a>
-                        <a href="#" class="text-indigo-300 hover:text-slate-100"><i class="fab fa-youtube text-lg"></i></a>
+                    <h4 class="text-lg font-semibold text-slate-800 mb-4">Velin</h4>
+                    <p class="text-sm text-slate-500 mb-4">Your one-stop fashion destination for the latest trends and styles.</p>
+                     <div class="flex space-x-4"> <!-- Increased spacing -->
+                        <a href="#" class="text-slate-500 hover:text-rose-500 transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-rose-500 transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-rose-500 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-slate-500 hover:text-rose-500 transition-colors"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="text-base font-semibold text-slate-50 mb-2">Shop</h4>
-                    <ul class="space-y-1 text-slate-300">
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Men's Collection</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Women's Collection</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Kid's Wear</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Accessories</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Sale Items</a></li>
+                    <h4 class="text-lg font-semibold text-slate-800 mb-4">Shop</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Men's Collection</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Women's Collection</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Kid's Wear</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Accessories</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Sale Items</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-base font-semibold text-slate-50 mb-2">Customer Service</h4>
-                    <ul class="space-y-1 text-slate-300">
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">FAQs</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Shipping & Returns</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Track Order</a></li>
-                        <li><a href="#" class="hover:text-slate-100 text-xs">Size Guide</a></li>
+                    <h4 class="text-lg font-semibold text-slate-800 mb-4">Customer Service</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">FAQs</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Track Order</a></li>
+                        <li><a href="#" class="text-slate-600 hover:text-slate-900 transition-colors">Size Guide</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-base font-semibold text-slate-50 mb-2">Newsletter</h4>
-                    <p class="text-xs mb-2 text-slate-300">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <h4 class="text-lg font-semibold text-slate-800 mb-4">Newsletter</h4>
+                    <p class="text-sm mb-4 text-slate-500">Subscribe for special offers, free giveaways, and exclusive deals.</p>
                     <form action="#">
                         <div class="flex">
-                            <input type="email" placeholder="Enter your email" class="w-full py-1.5 px-2 rounded-l-md text-slate-800 bg-slate-100 focus:outline-none focus:ring-2 focus:ring-rose-500 text-xs placeholder-slate-400">
-                            <button type="submit" class="bg-red-700 hover:bg-rose-600 active:green-700 text-white py-1.5 px-3 rounded-r-md text-xs">Subscribe</button>
+                             <input type="email" placeholder="Enter your email" class="w-full py-2.5 px-3 rounded-l-md text-slate-700 bg-white border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-transparent text-sm placeholder-slate-400">
+                             <button type="submit" class="bg-gradient-to-r from-orange-500 to-rose-500 hover:from-orange-600 hover:to-rose-600 text-white py-2.5 px-4 rounded-r-md text-sm font-semibold transition duration-300 shadow hover:shadow-md">Subscribe</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="border-t border-slate-200 pt-6 text-center text-slate-400">
-                <p class="text-xs">© 2024 Velin Thread Fashion (Sadman wahid). All Rights Reserved. Designed with Tailwind CSS.</p>
-                 <p class="text-xs mt-1">This is a conceptual clone for demonstration purposes.</p>
+            <div class="border-t border-slate-300 pt-8 text-center text-slate-500">
+                <p class="text-sm">© 2024 Velin Fashion (Sadman wahid). All Rights Reserved.</p>
+                 <p class="text-xs mt-1">Designed with Tailwind CSS. Team Vinchenzo.</p>
             </div>
         </div>
     </footer>
 
     <!-- Cart Notification Bubble -->
-    <div id="cart-notification-bubble" class="fixed bottom-5 right-5 bg-emerald-500 text-white py-3 px-5 rounded-lg shadow-xl text-sm font-medium z-[100] opacity-0 transition-all duration-300 ease-in-out transform translate-y-10 pointer-events-none">
-        Product added to cart!
+    <div id="cart-notification-bubble" class="fixed bottom-5 right-5 bg-teal-500 text-white py-3 px-5 rounded-lg shadow-xl text-sm font-medium z-[100] opacity-0 transition-all duration-300 ease-in-out transform translate-y-10 pointer-events-none">
+        <i class="fas fa-check-circle mr-2"></i> Product added to cart!
     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Your existing script.js will handle slider initialization and product loading -->
     <script src="script.js"></script>
 </body>
 </html>
