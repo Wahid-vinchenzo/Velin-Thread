@@ -1,4 +1,4 @@
-// Product & Cart Data and Configuration
+// Product & Cart Data 
 
 const products = [
     { id: 1, name: "Stylish Men's Tee", brand: "RAW", price: 20, image: "https://images-na.ssl-images-amazon.com/images/I/71Uhxs+VUBL._SLDPMOBCAROUSELAUTOCROP288221_MCnd_AC_SR462,693_.jpg" },
@@ -9,7 +9,6 @@ const products = [
     { id: 6, name: "Empire Waist Dress", brand: "EcoThreads", price: 27, image: "https://prettykittyfashion.co.uk/cdn/shop/products/7_6b15e1fb-29e5-4fb9-930e-7cc0cf512087.jpg?v=1677064122" },
     { id: 7, name: "Double Poly Sunglass", brand: "Fashionista", price: 15, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7jYmBLWg-e50KhNPfH2jRYRUP0WEUX4wBYkH1zSLy-gWvVqBsIDCTO2rvsREOphMoxbY&usqp=CAU" },
     { id: 8, name: "MEN'S SLIPER GREY/ORANGE", brand: "StyleMax", price: 35, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUpmVEWBZQ2gpyChX2BCfEijyqvcpvYWbBJA&s" },
-    // --- START: 8 New Products Added ---
     { id: 9, name: "Urban Explorer Backpack", brand: "TrailBlazer", price: 55, image: "https://cdn11.bigcommerce.com/s-me8jghab9t/images/stencil/1000x1000/products/567/52832/oe8o8bmx12uulwfbut2q__91969.1709233430.jpg?c=1" },
     { id: 10, name: "Wireless Charging Pad", brand: "ElectroCharge", price: 28, image: "https://img.drz.lazcdn.com/static/bd/p/a1d41ee71f857221624b182cb2ac8e1e.jpg_720x720q80.jpg" },
     { id: 11, name: "Cozy Knit Scarf", brand: "WarmEmbrace", price: 19, image: "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/15/5885493/1.jpg?7893" },
@@ -18,18 +17,18 @@ const products = [
     { id: 14, name: "Ceramic Coffee Mug", brand: "MorningBrew", price: 26, image: "https://clayimagebd.com/web/image/product.template/83/image_1024?unique=5a3d989" },
     { id: 15, name: "Portable Bluetooth Speaker", brand: "SoundWave", price: 39, image: "https://www.ubuy.com.bd/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvNTFMS2w0d0RBT0wuX1NTNDAwXy5qcGc.jpg" },
     { id: 16, name: "Yoga Mat with Strap", brand: "ZenFlex", price: 30, image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYSUyMG1hdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=200&q=60" }
-    // --- END: 8 New Products Added ---
+    // --- END:  ---
 ];
 
 const shippingCost = 10;
-const discountRate = 0.15; // 15% discount
+const discountRate = 0.15; 
 
 
 // Cart Functions (accessible globally for onclick)
 
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    // Find all cart count elements (navbar might have multiple in some structures)
+    // Find all cart count elements 
     document.querySelectorAll("#cart-count").forEach(span => {
         if (span) span.textContent = cart.length;
     });
@@ -55,7 +54,7 @@ function addToCart(productId) {
     }
 
 
-    // Re-render cart if it's visible (e.g., on cart.html page)
+    // Re-render cart if it's visible 
     if (typeof window.renderCart === 'function' && document.getElementById("cart-items")) {
         window.renderCart();
     }
@@ -88,7 +87,6 @@ function orderNow() {
     const messageElement = document.getElementById("thank-you");
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Light Theme Classes (as defined in cart.html)
     const successTextClass = "text-green-800";
     const successBorderClass = "border-green-300";
     const successBgClass = "bg-green-50";
@@ -129,7 +127,7 @@ function orderNow() {
 // DOMContentLoaded - Main script execution
 
 document.addEventListener("DOMContentLoaded", () => {
-    // --- Hamburger Menu Logic (No theme changes needed here, controlled by CSS/HTML) ---
+    // --- Hamburger Menu Logic (No theme changes needed here) ---
     const hamburger = document.querySelector(".hamburger-menu");
     const navItemsGroup = document.getElementById("navItemsGroup");
     const bars = hamburger ? hamburger.querySelectorAll(".bar") : [];
@@ -278,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (product) {
                     subtotal += product.price * count;
                     const li = document.createElement("li");
-                    // Light theme classes for cart items
+                    
                     li.className = "flex items-center justify-between py-4"; // Removed border here, using divide-y on <ul> in HTML
                     li.innerHTML = `
                         <div class="flex items-center space-x-3 flex-grow min-w-0"> 
@@ -387,4 +385,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-}); // End DOMContentLoaded
+}); 
